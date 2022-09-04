@@ -1,6 +1,10 @@
+
+// Generate a Random Number
 function getRandomNumber(){
     return Math.floor((Math.random()*3));
 }
+
+// Get the Computer Choice
 
 function getComputerChoice(){
     let num = getRandomNumber();
@@ -20,12 +24,16 @@ function getComputerChoice(){
     }
 }
 
+// Get the User Choice
+
 function getUserChoice(){
     let input = prompt("Enter your choice: ")
     let ans = input.toLowerCase();
     ans = ans.charAt(0).toUpperCase() + ans.slice(1);
     return ans;
 }
+
+// Check user Input
 
 function checkUserChoice(userChoice){
     switch(userChoice){
@@ -40,6 +48,8 @@ function checkUserChoice(userChoice){
             return false;
     }
 }
+
+// PlayRound - Check the winner
 
 function playRound(userChoice, computerChoice){
 
@@ -58,6 +68,8 @@ function playRound(userChoice, computerChoice){
 
     return false;
 }
+
+// game - to play 5 rounds
 
 function game(){
     let round = 0;
@@ -97,6 +109,8 @@ function game(){
 
 
 }
+
+// Display the Winner
 
 function displayWinner(user, computer){
 
