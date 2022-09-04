@@ -73,8 +73,8 @@ function playRound(userChoice, computerChoice){
 
 function game(){
     let round = 0;
-    let user = 0;
-    let computer = 0;
+    let userWinCount = 0;
+    let computerWinCount = 0;
     while(round<5){
         let userChoice = getUserChoice();
         let computerChoice = getComputerChoice();
@@ -86,11 +86,11 @@ function game(){
 
                 if(result == true){
                     alert(`Yor Win! ${userChoice} beats ${computerChoice}`);
-                    user++;
+                    userWinCount++;
                 }
                 else if(result = false){
                     alert(`Yor Loose! ${computerChoice} beats ${userChoice}`)
-                    computer++;
+                    computerWinCount++;
                 }
                 else{
                     alert("It's a Tie!");
@@ -102,22 +102,22 @@ function game(){
         }
 
         alert(`Total Round = ${round}`);
-        alert(`Your Wins = ${user} & Computer Wins = ${computer}`);
+        alert(`Your Wins = ${userWinCount} & Computer Wins = ${computerWinCount}`);
     }
 
-    displayWinner(user, computer);
+    displayWinner(userWinCount, computerWinCount);
 
 
 }
 
 // Display the Winner
 
-function displayWinner(user, computer){
+function displayWinner(userWinCount, computerWinCount){
 
-    if(user > computer){
+    if(userWinCount > computerWinCount){
         alert("Lets Celebrate! Your are the Winner of this Game.");
     }
-    else if(user < computer){
+    else if(userWinCount < computerWinCount){
         alert("Computer is the Winner of this Game. Try Again!");
     }
     else{
