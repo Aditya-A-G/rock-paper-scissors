@@ -85,11 +85,11 @@ function game(){
             let result = playRound(userChoice,computerChoice);
 
                 if(result == true){
-                    alert(`Yor Win! ${userChoice} beats ${computerChoice}`);
+                    alert(`You Win! ${userChoice} beats ${computerChoice}`);
                     userWinCount++;
                 }
                 else if(result == false){
-                    alert(`Yor Loose! ${computerChoice} beats ${userChoice}`)
+                    alert(`You Loose! ${computerChoice} beats ${userChoice}`)
                     computerWinCount++;
                 }
                 else{
@@ -115,7 +115,7 @@ function game(){
 function displayWinner(userWinCount, computerWinCount){
 
     if(userWinCount > computerWinCount){
-        alert("Lets Celebrate! Your are the Winner of this Game.");
+        alert("Lets Celebrate! You are the Winner of this Game.");
     }
     else if(userWinCount < computerWinCount){
         alert("Computer is the Winner of this Game. Try Again!");
