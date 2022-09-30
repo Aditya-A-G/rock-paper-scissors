@@ -88,7 +88,7 @@ function game(){
                     alert(`Yor Win! ${userChoice} beats ${computerChoice}`);
                     userWinCount++;
                 }
-                else if(result = false){
+                else if(result == false){
                     alert(`Yor Loose! ${computerChoice} beats ${userChoice}`)
                     computerWinCount++;
                 }
