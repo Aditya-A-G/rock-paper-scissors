@@ -10,7 +10,7 @@ html {
     margin: 0;
     padding: 0;
 }
-  .stats{
+  .choices{
     height: 250px;
     width: 100%;
     display: flex;
@@ -36,12 +36,48 @@ html {
     background-color: aquamarine;
   }
 
-  .count{
-    font-size: 32px;
-  }
 
 .vs{
     margin-top: auto;
     margin-bottom: auto;
     font-size: 40px;
+}
+
+.stats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 16px;
+}
+
+.points{
+  display: flex;
+  justify-content: center;
+  gap: 680px;
+}
+
+#message{
+  text-align: center;
+  font-size: 32px;
+  margin-top: 24px;
+}
+
+.select{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.options{
+  display: flex;
+  gap: 90px;
+}
+
+img{
+  height: 150px;
+  width: 150px;
 }
