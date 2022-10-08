@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body style="text-align: center">
-    <h1>Human vs Computer</h1>
-    <h3>Rock-Paper-Scissor</h3>
-    <button onclick="game()">Play Game</button>
-    <script src="game.js"></script>
+<body>
+    <div class="stats">
+
+        <div class="container">
+            <p>Computer Choice</p>
+            <div class="choice"></div>
+        </div>
+      
+        <p class="vs">VS</p>
+
+        <div class="container">
+            <p>User Choice</p>
+            <div class="choice"></div>
+        </div>
+        
+    </div>
+
+    <p>Score</p>
+    <p class="count">count</p>
+    <button>reset</button>
+    <p class="count">count</p>
+    <p>Can You Beat Computer?</p>
+
+    <div class="select">
+        <h6>Select</h6>
+        <div class="options">
+            <img src="#" alt="rock">
+            <img src="#" alt="paper">
+            <img src="#" alt="scissor">
+        </div>
+    </div>
+    
 </body>
 </html>

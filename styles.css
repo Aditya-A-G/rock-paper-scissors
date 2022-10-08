@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+  .stats{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 200px;
+    padding-top: 10px;
+  }
+
+  .container{
+    background-color: coral;
+    height: 250px;
+    width: 300px;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      }
+
+  .choice{
+    margin-top: 16px;
+    height: 180px;
+    width: 180px;
+    background-color: aquamarine;
+  }
+
+  .count{
+    font-size: 32px;
+  }
+
+.vs{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 40px;
+}
