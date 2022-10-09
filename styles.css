@@ -47,7 +47,13 @@ body{
 #message{
   text-align: center;
   font-size: 32px;
-  margin-top: 132px;
+  margin-top: 70px;
+}
+
+#winner{
+  text-align: center;
+  font-size: 32px;
+  margin-top: 16px;
 }
 
 .select{
