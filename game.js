@@ -1,4 +1,36 @@
 
+let userWinCount = 0;
+let computerWinCount = 0;
+
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissor = document.getElementById("scissor");
+
+rock.addEventListener("click", giveRockAsUserInput);
+paper.addEventListener("click", givePaperAsUserInput);
+scissor.addEventListener("click", giveScissorAsUserInput);
+
+function giveRockAsUserInput(){
+    let computerChoice = getComputerChoice();
+    playGame("Rock", computerChoice);
+}
+
+function givePaperAsUserInput(){
+    let computerChoice = getComputerChoice();
+    playGame("Paper", computerChoice);
+}
+
+function giveScissorAsUserInput(){
+    let computerChoice = getComputerChoice();
+    playGame("Scissor", computerChoice);
+}
+
+function playGame(userChoice, computerChoice){
+    let result = playRound(userChoice, computerChoice);
+    
+}
+
+
 // Generate a Random Number
 function getRandomNumber(){
     return Math.floor((Math.random()*3));
@@ -24,30 +56,8 @@ function getComputerChoice(){
     }
 }
 
-// Get the User Choice
 
-function getUserChoice(){
-    let input = prompt("Enter your choice: ")
-    let ans = input.toLowerCase();
-    ans = ans.charAt(0).toUpperCase() + ans.slice(1);
-    return ans;
-}
 
-// Check user Input
-
-function checkUserChoice(userChoice){
-    switch(userChoice){
-        case "Rock": 
-            return true;
-        case "Paper": 
-            return true;
-        case "Scissor":
-            return true;
-        default:
-            alert("Input is wrong!");
-            return false;
-    }
-}
 
 // PlayRound - Check the winner
 
@@ -69,47 +79,6 @@ function playRound(userChoice, computerChoice){
     return false;
 }
 
-// game - to play 5 rounds
-
-function game(){
-    let round = 0;
-    let userWinCount = 0;
-    let computerWinCount = 0;
-    while(round<5){
-        let userChoice = getUserChoice();
-        let computerChoice = getComputerChoice();
-
-        let check = checkUserChoice(userChoice);
-
-        if(check){
-            let result = playRound(userChoice,computerChoice);
-
-                if(result == true){
-                    alert(`You Win! ${userChoice} beats ${computerChoice}`);
-                    userWinCount++;
-                }
-                else if(result == false){
-                    alert(`You Loose! ${computerChoice} beats ${userChoice}`)
-                    computerWinCount++;
-                }
-                else{
-                    alert("It's a Tie!");
-                }
-
-            round++;
-         }else{
-            alert("Please select correct choice");
-        }
-
-        alert(`Total Round = ${round}`);
-        alert(`Your Wins = ${userWinCount} & Computer Wins = ${computerWinCount}`);
-    }
-
-    displayWinner(userWinCount, computerWinCount);
-
-
-}
-
 // Display the Winner
 
 function displayWinner(userWinCount, computerWinCount){
@@ -125,4 +94,10 @@ function displayWinner(userWinCount, computerWinCount){
     }
     
 }
+
+   
+
+
+
+
 
