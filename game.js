@@ -6,12 +6,12 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissor = document.getElementById("scissor");
 const p = document.getElementById("vs");
-console.log(p);
+
 const message = document.getElementById("message");
 const setUserWinCount = document.getElementById("userWinCount");
 const setComputerWinCount = document.getElementById("computerWinCount");
 const winner = document.getElementById("winner");
-console.log(winner);
+
 
 rock.addEventListener("click", giveRockAsUserInput);
 paper.addEventListener("click", givePaperAsUserInput);
@@ -42,8 +42,6 @@ function playGame(userChoice, computerChoice){
         message.innerText = "Can You Beat Computer?";
         console.log("it reaches")
         console.log(p);
-        p.textContent = "vs";
-        winner.textContent = "Let's Play";
     }
 
     let result = playRound(userChoice, computerChoice);
@@ -67,7 +65,6 @@ function playGame(userChoice, computerChoice){
 
     if(userWinCount == 5 || computerWinCount == 5){
         displayWinner(userWinCount, computerWinCount);
-
     }
 
 }
