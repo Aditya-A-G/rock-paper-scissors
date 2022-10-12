@@ -6,10 +6,9 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissor = document.getElementById("scissor");
 const p = document.getElementById("vs");
-
 const message = document.getElementById("message");
-const setUserWinCount = document.getElementById("userWinCount");
-const setComputerWinCount = document.getElementById("computerWinCount");
+const countOfUserWins = document.getElementById("userWinCount");
+const countOfComputerWins = document.getElementById("computerWinCount");
 const winner = document.getElementById("winner");
 
 
@@ -32,31 +31,37 @@ function giveScissorAsUserInput(){
     playGame("Scissor", computerChoice);
 }
 
+
 function playGame(userChoice, computerChoice){
 
     if(userWinCount == 5 || computerWinCount == 5){
+        
         userWinCount = 0; 
         computerWinCount = 0;
-        setUserWinCount.innerText = userWinCount;
-        setComputerWinCount.innerText = computerWinCount;
+
+        countOfUserWins.innerText = userWinCount;
+        countOfComputerWins.innerText = computerWinCount;
         message.innerText = "Can You Beat Computer?";
-        console.log("it reaches")
-        console.log(p);
+
     }
 
     let result = playRound(userChoice, computerChoice);
 
     if(result == true){
+
+        userWinCount++;
+
         p.innerText = "You Win";
         winner.innerText = `${userChoice} beats ${computerChoice}`;
-        userWinCount++;
-        setUserWinCount.innerText = userWinCount;
+        countOfUserWins.innerText = userWinCount;
     }
     else if(result == false){
+
+        computerWinCount++;
+
         p.innerText = "You Loose";
         winner.innerText = `${computerChoice} beats ${userChoice}`;
-        computerWinCount++;
-        setComputerWinCount.innerText = computerWinCount;
+        countOfComputerWins.innerText = computerWinCount;
     }
     else{
         p.innerText = "No Winner";
@@ -69,13 +74,9 @@ function playGame(userChoice, computerChoice){
 
 }
 
-
-// Generate a Random Number
 function getRandomNumber(){
     return Math.floor((Math.random()*3));
 }
-
-// Get the Computer Choice
 
 function getComputerChoice(){
     let num = getRandomNumber();
@@ -94,9 +95,6 @@ function getComputerChoice(){
             alert("Something went wrong");
     }
 }
-
-
-
 
 // PlayRound - Check the winner
 
@@ -117,8 +115,6 @@ function playRound(userChoice, computerChoice){
 
     return false;
 }
-
-// Display the Winner
 
 function displayWinner(userWinCount, computerWinCount){
 
